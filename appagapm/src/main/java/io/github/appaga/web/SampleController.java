@@ -8,13 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import io.github.appaga.base.BaseController;
 
 @Controller
-@RequestMapping("/")
-public class HomeController extends BaseController {
+@RequestMapping("/sample")
+public class SampleController extends BaseController {
 	
-	@GetMapping
-	public String home(Model model) {
-		model.addAttribute("pageTitle", "Home");
-		return "/web/home";
+	@GetMapping("w3sample")
+	public String w3sample(Model model) {
+		model.addAttribute("pageTitle", "W3 샘플");
+		return "/web/sample/w3sample";
 	}
-	
 }
