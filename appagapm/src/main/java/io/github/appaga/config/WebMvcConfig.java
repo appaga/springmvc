@@ -94,7 +94,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 		SpringTemplateEngine templateEngine = new SpringTemplateEngine();
 		templateEngine.setEnableSpringELCompiler(true); // Compiled SpringEL should speed up executions
 		templateEngine.setTemplateResolver(templateResolver());
-		templateEngine.addDialect(new LayoutDialect()); // 레이아웃 관리(기본)
+		templateEngine.addDialect(new LayoutDialect()); // nz.net.ultraq.thymeleaf 레이아웃 관리 추가
 		//templateEngine.addDialect(new SpringSecurityDialect()); // 스프링 시큐리티 dialect
 		return templateEngine;
 	}
