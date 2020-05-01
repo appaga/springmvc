@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HOME</title>
+<link rel="stylesheet" th:href="@{/assets/w3/w3.css}">
+<link rel="stylesheet" th:href="@{/assets/w3//w3-theme-red.css}">
+<body>
+	<div class="w3-main">
+
+		<header class="w3-container w3-theme" style="padding: 64px 32px">
+			<h1 class="w3-xxxlarge"><a th:href="@{/}">Home</a></h1>
+		</header>
+
+		<div class="w3-container" style="padding: 32px">
+			<h2>Error! <span th:text="|(${status})|">status</span></h2>
+			<p th:text="${error}">error</p>
+			<ul class="w3-leftbar w3-theme-border" style="list-style: none">
+				<li th:text="${message}">message</li>
+				<li th:text="${exception}">exception</li>
+				<li th:text="${trace}">trace</li>
+			</ul>
+			<br>
+		</div>
+	</div>
+</body>
+</html>
