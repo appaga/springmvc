@@ -110,6 +110,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 	@Override
 	public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+		// request body xss 추가
 		converters.add(escapingConverter());
 
 	}
