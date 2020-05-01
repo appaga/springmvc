@@ -1,2 +1,2 @@
-# applications powored by Springboot
+# applications powered by Springboot
 
