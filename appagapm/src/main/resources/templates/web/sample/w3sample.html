@@ -3,7 +3,7 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="~{layout/default}">
 <head>
-<title>${pageTitle}</title>
+<title th:text="${pageTitle}">page title</title>
 </head>
 <body>
 <th:block layout:fragment="page_content" >
@@ -20,7 +20,9 @@
  <li>Provides CSS equality for all devices. PC, laptop, tablet, and mobile:</li>
 </ul>
 <br>
+<a href="https://www.w3schools.com/w3css/tryw3css_examples_material.htm">
 <img src="https://www.w3schools.com/w3css/img_responsive.png" style="width:100%" alt="Responsive">
+</a>
 
 <hr>
 <h2>W3.CSS is Free</h2>

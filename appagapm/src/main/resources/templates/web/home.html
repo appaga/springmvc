@@ -3,7 +3,7 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="~{layout/default}">
 <head>
-<title>${pageTitle}</title>
+<title th:text="${pageTitle}">page title</title>
 <!-- page_header -->
 </head>
 <body>
