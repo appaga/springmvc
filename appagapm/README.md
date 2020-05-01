@@ -1,9 +1,16 @@
-# Getting Started
+# Getting Started v0.1.0
 [Spring boot 2.2.6][springboot]을 이용한 웹 어플리케이션 기본 프로젝트로 만든 것이다.
+[Thymeleaf][thymeleaf] 템플릿엔진을 이용하고 [W3.CSS][w3css]를 사용하여 html/css 퍼블리싱을 한다.
+
 소규모 프로젝트 또는 소규모 조직의 자원을 관리하는 어플리케이션을 만들고자 한다.
+`0.1.0` 버전은 기본 프로젝트 구조만 잡은 상태이다.
 
 ## html/css, font 등 디자인 자원
 [W3.CSS][w3css]를 이용하여 html 화면 디자인을 처리한다.
+[Material Design 템플릿](https://www.w3schools.com/w3css/tryw3css_examples_material.htm)을 기본 레이아웃으로 설정하였다.
+
+이미지를 만들 때 PNG 파일의 백그라운드를 제거하여 투명하게 만들 때는 [removebg](https://www.remove.bg/) 홈페이지를 이용한다.
+백그라운드를 제거하고자 하는 이미지 파일을 드래그앤드롭하여 온라인으로 바로 투명한 백그라운드 갖는 PNG 파일을 얻을 수 있어 유용하다.
 
 폰트는 네이버에서 제공하는 [나눔스퀘어라운드][naverfont]를 사용한다.
 TTF 폰트를 다운받아서 [Online Font Convenverter][fontconverter]에서 `EOT`, `WOFF`, `WOFF2` 등으로 변환하여 사용하였다.
@@ -186,13 +193,20 @@ public class WebMvcConfig implements WebMvcConfigurer {
 }
 ```
 
+## 프로젝트 실행 화면
+기본적으로 설정된 프로젝트를 실행하면 아래와 같이 [W3.CSS][w3css] 템플릿이 적용된 반응형 웹페이지를 확인할 수 있다.
+![PC용 대화면](/docs/v0.1.0home.png "PC용 큰화면")
+
+모바일에서는 외쫀 네비게이션 메뉴가 좌측 상단의 메뉴 버튼으로 숨겨진다.
+![모바일 화면](/docs/v0.1.0mobile.png "모바일 화면")
+
 ## Reference Documentation
 For further reference, please consider the following sections:
 
 * [Spring Web 2.2.6][springboot]
-* [Thymeleaf][thymeleaf]
 * [W3.CSS][w3css]
-* [Thymeleaf Layout Dialect][thymeleaflayoutdialect]
+* [나눔스퀘어라운드][naverfont]
+* [Thymeleaf][thymeleaf]
 * [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/maven-plugin/)
 * [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/reference/htmlsingle/#using-boot-devtools)
