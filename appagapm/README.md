@@ -195,10 +195,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
 ## 프로젝트 실행 화면
 기본적으로 설정된 프로젝트를 실행하면 아래와 같이 [W3.CSS][w3css] 템플릿이 적용된 반응형 웹페이지를 확인할 수 있다.
-![PC용 대화면](/docs/v0.1.0home.png "PC용 큰화면")
+[PC용 대화면 웹페이지](https://github.com/appaga/springmvc/blob/master/appagapm/docs/v0.1.0home.png "PC용 큰화면")
 
 모바일에서는 외쫀 네비게이션 메뉴가 좌측 상단의 메뉴 버튼으로 숨겨진다.
-![모바일 화면](/docs/v0.1.0mobile.png "모바일 화면")
+[모바일 화면 웹페이지](https://github.com/appaga/springmvc/blob/master/appagapm/docs/v0.1.0mobile.png "모바일 화면")
 
 ## Reference Documentation
 For further reference, please consider the following sections:
