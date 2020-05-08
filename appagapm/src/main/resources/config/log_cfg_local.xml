@@ -7,6 +7,7 @@
     </appender>
     
     <logger name="org.springframework.web" level="INFO" />
+    <logger name="org.springframework.jdbc" level="DEBUG" />
     <logger name="io.github.appaga" level="DEBUG" />
     <root level="INFO">
         <appender-ref ref="STDOUT" />
