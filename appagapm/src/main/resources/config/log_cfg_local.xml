@@ -2,12 +2,12 @@
 <configuration scan="true" scanPeriod="60 seconds">
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%d{HHmmss}|%7relative|%thread|%level|●%logger{25}.%method|%4L|▶%msg%n</pattern>
+            <pattern>%-5level:%d{HHmmss}|%7relative|%thread|●%logger{25}.%method|%4L|▶%msg%n</pattern>
         </layout>
     </appender>
     
     <logger name="org.springframework.web" level="INFO" />
-    <logger name="io.github.ttallaemideul" level="DEBUG" />
+    <logger name="io.github.appaga" level="DEBUG" />
     <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>

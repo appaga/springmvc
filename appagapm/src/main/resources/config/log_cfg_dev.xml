@@ -2,7 +2,7 @@
 <configuration scan="true" scanPeriod="60 seconds">
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <pattern>%d{yyyyMMdd-HH:mm:ss}|%7relative|%-22thread|%-5level|●%-50logger{50}|%-20method|%4L|▶%msg%n</pattern>
+            <pattern>%-5level:%d{yyyyMMdd-HH:mm:ss}|%7relative|%-22thread|●%-50logger{50}|%-20method|%4L|▶%msg%n</pattern>
         </layout>
     </appender>
     
@@ -17,7 +17,7 @@
         <file>${LOG_PATH}/log.log</file>
         <!-- 출력패턴 -->
         <encoder>
-            <pattern>%d{yyyyMMdd-HH:mm:ss}|%7relative|%-22thread|%-5level|●%-50logger{50}|%-20method|%4L|▶%msg%n</pattern>
+            <pattern>%-5level:%d{yyyyMMdd-HH:mm:ss}|%7relative|%-22thread|●%-50logger{50}|%-20method|%4L|▶%msg%n</pattern>
         </encoder>
         <!-- Rolling 정책 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -35,7 +35,7 @@
     <logger name="org.springframework.web" level="INFO">
     </logger>
     <!-- 전체 -->
-    <logger name="io.github.ttallaemideul" level="INFO">
+    <logger name="io.github.appaga" level="INFO">
     	<appender-ref ref="FILELOG" />
     </logger>
     
