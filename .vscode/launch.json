@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootAppMain<appaga-pm>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "io.github.appaga.SpringBootAppMain",
+            "projectName": "appaga-pm",
+            "args": ""
+        }
+    ]
+}
