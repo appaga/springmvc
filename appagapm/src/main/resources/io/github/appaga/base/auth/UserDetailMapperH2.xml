@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.appaga.base.auth.UserDetailMapperH2">
+
+	<resultMap id="userDetailResultMap" type="io.github.appaga.base.auth.UserDetail">
+		<id property="user_id" column="user_id"/>
+		<association property="user" javaType="io.github.appaga.base.auth.User">
+			<id property="user_id" column="user_id"/>
+			<result property="active_yn" column="active_yn"/>
+			<result property="expired_yn" column="expired_yn"/>
+			<result property="locked_yn" column="locked_yn"/>
+			<result property="pwd_expired_yn" column="pwd_expired_yn"/>
+			<result property="login_id" column="login_id"/>
+			<result property="nickname" column="nickname"/>
+			<result property="pwd" column="pwd"/>
+			<result property="reg_ymd" column="reg_ymd"/>
+			<result property="reg_hms" column="reg_hms"/>
+			<result property="upd_ts" column="upd_ts"/>
+		</association>
+		<collection property="roles" ofType="io.github.appaga.base.auth.UserRole">
+			<id property="role_id" column="role_id"/>
+			<result property="role_nm" column="role_nm"/>
+			<result property="role_dp_nm" column="role_dp_nm"/>
+		</collection>
+	</resultMap>
+	
+	<select id="loadUserByUsername" resultMap="userDetailResultMap">
+	select
+		u.user_id
+		, u.active_yn
+		, u.expired_yn
+		, u.locked_yn
+		, u.pwd_expired_yn
+  		, u.login_id
+		, u.nickname
+		, u.pwd
+		, u.reg_ymd
+		, u.reg_hms
+		, u.upd_ts
+		, ar.role_id
+        , ar.role_nm
+        , ar.role_dp_nm
+	from user u join user_role ur using(user_id)
+		join auth_role ar on ur.role_id=ar.role_id
+    where u.login_id=#{login_id}
+    order by ar.role_nm
+	</select>
+	
+</mapper>

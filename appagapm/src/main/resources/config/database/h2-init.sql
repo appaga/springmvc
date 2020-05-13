@@ -7,7 +7,7 @@ insert into auth_role (
 ( '6668bc8ab45c3be7641b3ffbc14dd894a297cfb420eccc69da0f1e93f2dd9b03'
     , 'ROLE_ADMIN', '시스템관리자', '시스템 최고 관리자')
 , ('10d586e706cf73c4a533ea58f0bdf88c5346cd81f654368a24b76109e3d9c0fd'
-    , 'ROLE_USER', '사용자''', '사용자')
+    , 'ROLE_USER', '사용자', '일반사용자')
 ;
 
 insert into users (
