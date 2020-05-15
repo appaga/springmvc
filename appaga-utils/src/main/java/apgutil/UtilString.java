@@ -143,4 +143,61 @@ public class UtilString {
 		}
 		return val;
 	}
+
+	/**
+	 * 파라미터가 long형 숫자로 파싱이 가능하면 long 변환 된 값을 리턴. 아니면 0을 리턴.
+	 * 
+	 * @param o
+	 * @return 변환된 long형 숫자, 숫자가 아니면 0
+	 */
+	public static int parseLong(final Object o) {
+		return parseLong(o, 0);
+	}
+
+	/**
+	 * 파라미터가 long형 숫자로 파싱이 가능하면 long형 변환 된 값을 리턴. 아니면 defaultVal를 리턴.
+	 * 
+	 * @param o
+	 * @param defaultVal 숫자로 변환 불가 시에 리턴되는 값.
+	 * @return 변환된 long형 숫자, 숫자가 아니면 defaultVal
+	 */
+	public static int parseLong(final Object o, final int defaultVal) {
+		if (isEmpty(o)) {
+			return 0;
+		}
+		final String s = (""+o).trim();
+		int val = defaultVal;
+		try {
+			val = Integer.parseInt(s);
+		} catch (NumberFormatException e) {
+			val = defaultVal;
+		}
+		return val;
+	}
+
+	/**
+	 * 문자열에서 숫자와 소수점을 포함한 문자만 리턴.
+	 * @param o
+	 * @return
+	 */
+	public static String getDoubleString(final Object o) {
+		if(isEmpty(o)) {
+			return "";
+		}
+		final String s = (""+o).trim();
+		return s.replaceAll("[^\\.0-9]", "");
+	}
+
+	/**
+	 * 문자열에서 숫자만 리턴.
+	 * @param o
+	 * @return
+	 */
+	public static String getIntString(final Object o) {
+		if(isEmpty(o)) {
+			return "";
+		}
+		final String s = (""+o).trim();
+		return s.replaceAll("\\D+", "");
+	}
 }
