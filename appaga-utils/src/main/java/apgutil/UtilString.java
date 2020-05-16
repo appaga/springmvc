@@ -150,7 +150,7 @@ public class UtilString {
 	 * @param o
 	 * @return 변환된 long형 숫자, 숫자가 아니면 0
 	 */
-	public static int parseLong(final Object o) {
+	public static long parseLong(final Object o) {
 		return parseLong(o, 0);
 	}
 
@@ -161,14 +161,14 @@ public class UtilString {
 	 * @param defaultVal 숫자로 변환 불가 시에 리턴되는 값.
 	 * @return 변환된 long형 숫자, 숫자가 아니면 defaultVal
 	 */
-	public static int parseLong(final Object o, final int defaultVal) {
+	public static long parseLong(final Object o, final long defaultVal) {
 		if (isEmpty(o)) {
 			return 0;
 		}
 		final String s = (""+o).trim();
-		int val = defaultVal;
+		long val = defaultVal;
 		try {
-			val = Integer.parseInt(s);
+			val = Long.parseLong(s);
 		} catch (NumberFormatException e) {
 			val = defaultVal;
 		}
