@@ -37,13 +37,16 @@ public class SysProperty implements Serializable {
 			this.serverMode = SERVER_MODE_LOCAL;
 		} else {
 			switch (serverMode) {
-			case SERVER_MODE_LOCAL:
-			case SERVER_MODE_DEV:
-			case SERVER_MODE_STG:
-			case SERVER_MODE_PRD:
-				this.serverMode = serverMode;
-				break;
+				case SERVER_MODE_LOCAL:
+				case SERVER_MODE_DEV:
+				case SERVER_MODE_STG:
+				case SERVER_MODE_PRD:
+					this.serverMode = serverMode;
+					break;
 			}
 		}
 	}
+
+	/** file-based db file location */
+	private String dbFilePath;
 }

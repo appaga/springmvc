@@ -197,6 +197,11 @@ public class WebMvcConfig implements WebMvcConfigurer {
 모바일에서는 왼쪽 네비게이션 메뉴가 좌측 상단의 메뉴 버튼으로 숨겨진다.
 ![모바일 화면 웹페이지](https://github.com/appaga/springmvc/blob/master/appagapm/docs/v0.1.0mobile.png?raw=true "모바일 화면")
 
+## github 프로젝트
+현재 github 프로젝트에는 spring-security 관련 작업 중인 소스도 같이 들어있으나 실행하여 기본 페이지 표시에는 아무 문제가 없는 상태이다.
+
+[github 프로젝트](https://github.com/appaga/springmvc/tree/master/appagapm "github 프로젝트")
+
 ## Reference Documentation
 For further reference, please consider the following sections:
 
