@@ -2,9 +2,6 @@
 [Spring boot 2.2.6][springboot]을 이용한 웹 어플리케이션 기본 프로젝트로 만든 것이다.
 [Thymeleaf][thymeleaf] 템플릿엔진을 이용하고 [W3.CSS][w3css]를 사용하여 html/css 퍼블리싱을 한다.
 
-소규모 프로젝트 또는 소규모 조직의 자원을 관리하는 어플리케이션을 만들고자 한다.
-`0.1.0` 버전은 기본 프로젝트 구조만 잡은 상태이다.
-
 ## html/css, font 등 디자인 자원
 [W3.CSS][w3css]를 이용하여 html 화면 디자인을 처리한다.
 [Material Design 템플릿](https://www.w3schools.com/w3css/tryw3css_examples_material.htm)을 기본 레이아웃으로 설정하였다.
